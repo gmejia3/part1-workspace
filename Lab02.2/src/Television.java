@@ -4,6 +4,7 @@ public class Television {
   private int volume;
 
   public void turnOn() {
+    boolean isConnected = verifyInternetConnection();
     System.out.println("The " + brand + " television is on, with a volume of " + volume);
   }
 
@@ -27,8 +28,14 @@ public class Television {
     this.volume = volume;
   }
 
+  private boolean verifyInternetConnection() {
+    return true;
+  }
+
   public String toString() {
     return "Television: Brand = " + getBrand() + " " + "Volume=" + getVolume();
   }
+
+
 }
 
