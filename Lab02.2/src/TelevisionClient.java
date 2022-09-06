@@ -2,17 +2,19 @@ public class TelevisionClient {
 
   public static void main(String[] args) {
     Television tv1 = new Television();
-    tv1.brand = "Vizio";
-    tv1.volume = 58;
+    tv1.setBrand("Vizio");
+    tv1.setVolume(58);
 
     Television tv2 = new Television();
-    tv2.brand = "Apple";
-    tv2.volume = 654;
+    tv2.setBrand("Apple");
+    tv2.setVolume(654);
 
     tv1.turnOn();
     tv1.turnOff();
 
     tv2.turnOn();
     tv2.turnOff();
-  }
+
+    System.out.println(tv1.toString());
+ }
 }
