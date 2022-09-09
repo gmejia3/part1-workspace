@@ -21,4 +21,9 @@ class Instructor {
         marker.setColor("blue");  // HA!  Whatever it was before, it's blue now!
         System.out.println("Instructor: writing '" + message + "' on the board");
     }
+
+    public static void main(String[] args) {
+        //writeOnBoard("Red", "Do Something");
+    }
+
 }
