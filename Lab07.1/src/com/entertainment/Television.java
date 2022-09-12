@@ -1,3 +1,5 @@
+package com.entertainment;
+
 public class Television {
 
   public static final int MIN_VOLUME = 0;
@@ -99,7 +101,7 @@ public class Television {
   }
 
   public String toString() {
-    return "Television: Brand = " + getBrand() + ", " + "Volume = " + getVolume() + ", " + "Display =";
+    return "com.entertainment.Television: Brand = " + getBrand() + ", " + "Volume = " + getVolume() + ", " + "Display =";
     // TODO: 9/8/2022 Need to set this field up. 
   }
 

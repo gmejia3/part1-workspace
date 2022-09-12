@@ -14,6 +14,9 @@
  */
 import java.time.*;
 import java.time.format.*;
+import java.time.temporal.ChronoField;
+import java.time.temporal.TemporalAdjuster;
+
 import static java.time.temporal.TemporalAdjusters.*;
 
 class DerivedDateTimeTest {
@@ -24,8 +27,8 @@ class DerivedDateTimeTest {
      */
     public static void main(String[] args) {
         // testPresidentsFirst100Days();
-        // testPopularBirthdays();
-        // testEarlyRetirement();
+//         testPopularBirthdays();
+//         testEarlyRetirement();
         // testLaborDay();
         // testElectionDay();
         // testAnniversary();
@@ -50,8 +53,12 @@ class DerivedDateTimeTest {
      */
     public static void testPopularBirthdays() {
         // TODO: what is the average birthday of someone conceived on Valentine's Day?
-
+        LocalDate valentines = LocalDate.of(2022, Month.FEBRUARY, 14);
+        System.out.println(valentines.plusWeeks(38));
         // TODO: what is the average birthday of someone conceived on New Year's Eve (after midnight)?
+        LocalDate newYearsDay = LocalDate.of(2022,1,1);
+        System.out.println(newYearsDay.plusWeeks(38));
+
     }
 
     /**
@@ -62,7 +69,7 @@ class DerivedDateTimeTest {
      * RESULT:
      */
     public static void testEarlyRetirement() {
-        // TODO
+       // LocalDate birth
     }
 
     /**
@@ -74,8 +81,11 @@ class DerivedDateTimeTest {
      */
     public static void testLaborDay() {
         // TODO
+        LocalDate laborDay = LocalDate
+            .of(1963, 12, 17)
+            .with(ChronoField.MONTH_OF_YEAR, 9);
+        //.with(TemporalAdjuster.first)
     }
-
     /**
      * TASK: Election Day in the United States is defined as the Tuesday immediately after the 1st Monday in November.
      * When is Election Day 2024?
