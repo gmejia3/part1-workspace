@@ -26,7 +26,7 @@ class DerivedDateTimeTest {
      * To run one test method at a time, uncomment the call to the one you want to execute.
      */
     public static void main(String[] args) {
-        // testPresidentsFirst100Days();
+//         testPresidentsFirst100Days();
 //         testPopularBirthdays();
 //         testEarlyRetirement();
         // testLaborDay();
@@ -42,6 +42,8 @@ class DerivedDateTimeTest {
      */
     public static void testPresidentsFirst100Days() {
         // TODO
+        LocalDate first100 = LocalDate.of(2017, 01, 20);
+        System.out.println(first100.plusDays(100));
     }
 
     /**
@@ -69,7 +71,8 @@ class DerivedDateTimeTest {
      * RESULT:
      */
     public static void testEarlyRetirement() {
-       // LocalDate birth
+       LocalDate birth = LocalDate.of(1993, 10, 20);
+        System.out.println(birth.plusYears(59));
     }
 
     /**

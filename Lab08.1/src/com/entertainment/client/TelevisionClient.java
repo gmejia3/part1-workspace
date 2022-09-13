@@ -18,7 +18,13 @@ class TelevisionClient {
         System.out.println(tv);
         
         // TODO: change the channel
-        
+        //tv.changeChannel("12");
+
         System.out.println(tv);
+        System.out.println(tv.getCurrentChannel());
+
+        tv.changeChannel("ESPN");
+        System.out.println(tv);
+        tv.toString();
     }
 }

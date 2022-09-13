@@ -22,10 +22,10 @@ class DateTimeTest {
      * To run one test method at a time, uncomment the call to the one you want to execute.
      */
     public static void main(String[] args) {
-        // testNow();
+//         testNow();
 //         testCreate();
-       //  testParse();
-         testFormat();
+         testParse();
+//         testFormat();
     }
 
     /**
@@ -62,9 +62,10 @@ class DateTimeTest {
      */
     public static void testParse() {
         // TODO: create your birthday by parsing a text representation in standard format ("yyyy-MM-dd").
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDate bday = LocalDate.parse("1993-10-20", formatter);
-        System.out.println(bday);
+        LocalDate hastings = LocalDate.of(1993, 10, 20);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/d/yyyy");
+        System.out.println(formatter.format(hastings));
+//        System.out.println(bday);
         // OPTIONAL: now create it by parsing text in the form "2/6/2014" (this is Feb 6, not Jun 2).
     }
 

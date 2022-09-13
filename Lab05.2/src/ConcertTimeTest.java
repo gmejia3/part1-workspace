@@ -12,8 +12,9 @@ import java.time.*;
 class ConcertTimeTest {
 
     public static void main(String[] args) {
-        listAvailableZoneIds();
-        // testLiveConcert();
+//        listAvailableZoneIds();
+         testLiveConcert();
+
     }
 
     /*
@@ -37,6 +38,14 @@ class ConcertTimeTest {
      * RESULT: 
      */
     public static void testLiveConcert() {
-        // TODO
+//        LocalDate torontoCa = LocalDate.now();
+//        System.out.println(LocalDateTime.now());
+//        System.out.println("lkiloipoli");
+
+        ZoneId toronto = ZoneId.of("America/Toronto");
+        ZoneId perth = ZoneId.of("Australia/Perth");
+        ZonedDateTime concertInToronto = ZonedDateTime.of(2020, 6, 18, 19,0,0,0, toronto);
+//        ZonedDateTime concertInToronto = ZonedDateTime.of(LocalDate.of())
+        System.out.println(concertInToronto);
     }
 }
