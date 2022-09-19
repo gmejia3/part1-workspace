@@ -61,7 +61,10 @@ public class PoemClient {
      * Use a try-with-resources to initialize the stream and auto-close it.
      */
     private static void writePoem(){
-        try (PrintWriter writer = new PrintWriter(new FileWriter("haiku.txt"))) {
+        try (
+            FileWriter file = new FileWriter( "haiku.txt");
+            PrintWriter writer = new PrintWriter(file)
+            ) {
             writer.println("A poem is nice");
             writer.println("A Hauiki is nicer now");
             writer.println("Reading is good thing");
